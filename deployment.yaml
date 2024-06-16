@@ -14,7 +14,7 @@ spec:
         app: course-api
     spec:
       containers:
-        - image: app:v1.05
+        - image: app:${CI_COMMIT_TAG:-$CI_COMMIT_SHORT_SHA}
           name: course-api
           ports:
             - containerPort: 5555
